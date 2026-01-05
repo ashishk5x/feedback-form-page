@@ -1,84 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indigo Ticket</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback-form</title>
+  </head>
+  <body>
     <header>
-        <p>
-            6E Rewards and IndiGo BluChip Accounts are managed separately. To use Voucher, Credit Shell & 6E Rewards, 
-            <a href="https://www.goindigo.in/?ui-ux=oldui">Click here</a>
-        </p>
+      <h1>Feedback & Assessment Form</h1>
+      <p>Your responses help us improve learning experiences.</p>
     </header>
-    
-    <h2>Hi there, where would you like to IndiGo today?</h2>
-
-    <label>
-        <input id="flight" type="radio" name="flight-hotel" value="flight">
-        Book a flight
-    </label>
-    <br><br>
-
-    <label>
-        <input id="one_way" type="radio" name="trip_type" value="one_way">
-        One way
-    </label>
-    <label>
-        <input id="round_trip" type="radio" name="trip_type" value="round_trip">
-        Round Trip
-    </label>
-    <label>
-        <input id="multi_city" type="radio" name="trip_type" value="multi_city">
-        Multi City
-    </label>
-
-    <section>
-        <h6>From</h6>
-        <strong>Delhi, DEL</strong><br>
-        Indira Gandhi International Airport
-    </section>
-    <section>
-        <h6>Departure</h6>
-        <strong>8 Mar</strong><br>
-        Saturday
-    </section>
-
-    <section>
-        <h6>Pay with</h6>
-        <label>
-            <input id="cash" type="radio" name="payment" value="cash">
-            Cash
-        </label>
-        <label>
-            <input id="indigo_bluechips" type="radio" name="payment" value="indigo_bluechips">
-            Indigo Bluechips
-        </label>
-    </section>
-
-    <section>
-        <h6>I am travelling for</h6>
-        <label>
-            <input id="leisure" type="radio" name="travel_purpose" value="leisure">
-            Leisure
-        </label>
-        <label>
-            <input id="work" type="radio" name="travel_purpose" value="work">
-            Work
-        </label>
-        <label>
-            <input id="medical" type="radio" name="travel_purpose" value="medical">
-            Medical
-        </label>
-    </section>
-
+    <main>
+      <form>
+        <!-- ================ Personal Information ===================== -->
+        <section class="Personal Information">
+          <h2>Personal Information</h2>
+          <fieldset>
+            <legend>Basic Details</legend>
+            <p>
+              <label>
+                Full Name:
+                <input type="text" name="fullname" required />
+              </label>
+            </p>
+            <p>
+              <label>
+                Email:
+                <input type="email" name="email" required />
+              </label>
+            </p>
+            <p>
+              <label>
+                Phone Number:
+                <input type="number" name="number" required />
+              </label>
+            </p>
+            <p>
+              <label>
+                Country:
+                <input type="text" name="country" required />
+              </label>
+            </p>
+          </fieldset>
+        </section>
+        <!-- ================ instructions ==================== -->
+        <section>
+          <h2>Instructions</h2>
+          <p>
+            Please answer all questions honestly. Some questions allow multiple
+            answers. Take your time.
+          </p>
+        </section>
+        <!-- ================ Quiz Section ==================== -->
+        <section class="Quiz Section">
+          <h2>Quiz Section</h2>
+          <article class="question1">
+            <h3>Question 1</h3>
+            <p>Which language is primarily used for structuring web pages?</p>
+            <label> <input type="radio" name="HTML" value="HTML" /> HTML </label
+            ><br />
+            <label> <input type="radio" name="CSS" value="CSS" /> CSS </label
+            ><br />
+            <label>
+              <input type="radio" name="JavaScript" value="JavaScript" />
+              Javascript
+            </label>
+          </article>
+          <article class="question2">
+            <h3>Question 2</h3>
+            <p>Select all semantic HTML elements:</p>
+            <label>
+              <input type="checkbox" name="section" value="section" />
+              Section </label
+            ><br />
+            <label>
+              <input type="checkbox" name="article" value="article" />
+              Article </label
+            ><br />
+            <label>
+              <input type="checkbox" name="div" value="div" /> Div
+            </label>
+          </article>
+          <article class="question3">
+            <h3>Question 3</h3>
+            <p>What does HTML stand for?</p>
+            <input type="text" name="Q3" />
+          </article>
+          <article class="question4">
+            <h3>Question 4</h3>
+            <blockquote>
+              <p>The beginning of wisdom is the definition of terms.</p>
+              <cite>— Socrates</cite>
+            </blockquote>
+            <p>Explain how this quote relates to learning programming.</p>
+            <textarea name="q4" rows="4"></textarea>
+          </article>
+          <article class="question5">
+            <h3>Question 5</h3>
+            <p>Rate your comfort level with the following technologies:</p>
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>Technology</th>
+                  <th>Beginner</th>
+                  <th>Intermediate</th>
+                  <th>Advanced</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>HTML</td>
+                  <td><input type="radio" name="html-level" /></td>
+                  <td><input type="radio" name="html-level" /></td>
+                  <td><input type="radio" name="html-level" /></td>
+                </tr>
+                <tr>
+                  <td>CSS</td>
+                  <td><input type="radio" name="css-level" /></td>
+                  <td><input type="radio" name="css-level" /></td>
+                  <td><input type="radio" name="css-level" /></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="question6">
+            <h3>Question 6</h3>
+            <p>Enter your age:</p>
+            <input type="number" name="q6" min="10" max="100" required />
+          </article>
+          <article class="question7">
+            <h3>Question 7</h3>
+            <p>Enter your professional email address:</p>
+            <input type="email" name="q7" />
+          </article>
+          <article class="question8">
+            <h3>Question 8</h3>
+            <p>Select your date of birth:</p>
+            <input type="date" name="q8" required />
+          </article>
+          <article class="question9">
+            <h3>Question 9</h3>
+            <p>What is your preferred study time?</p>
+            <input type="time" name="q9" required />
+          </article>
+          <article class="question10">
+            <h3>Question 10</h3>
+            <p>Select your highest education level:</p>
+            <select name="q10">
+              <option value="select">select</option>
+              <option value="school">school</option>
+              <option value="college">college</option>
+              <option value="graduate">graduate</option>
+              <option value="post-graduate">post-graduate</option>
+            </select>
+          </article>
+          <article class="question11">
+            <h3>Question 11</h3>
+            <p>Rate your confidence in HTML (1–10):</p>
+            <input type="range" name="q11" min="1" max="10" />
+          </article>
+          <article class="question12">
+            <h3>Question 12</h3>
+            <p>Upload your resume (PDF only):</p>
+            <input type="file" name="q12" accept=".pdf, .jpeg, .jpg" />
+          </article>
+          <article class="question13">
+            <h3>Question 13</h3>
+            <p>Share your GitHub or portfolio link:</p>
+            <input type="url" name="q13" placeholder="https://" />
+          </article>
+          <article class="question14">
+            <h3>Question 14</h3>
+            <p>Create a feedback access code:</p>
+            <input type="password" name="q14" />
+          </article>
+          <article class="question15">
+            <h3>Question 15</h3>
+            <p>Select your primary programming language:</p>
+            <input type="select" name="q15" list="languages" />
+            <datalist id="languages">
+              <option value="Python"></option>
+              <option value="JavaScript"></option>
+              <option value="Java"></option>
+              <option value="C#"></option>
+              <option value="Ruby"></option>
+            </datalist>
+          </article>
+          <article class="question16">
+            <h3>Question 16</h3>
+            <p>Pick a color that represents your mood while coding:</p>
+            <input type="color" name="q16" />
+          </article>
+          <article class="question17">
+            <h3>Question 17</h3>
+            <fieldset>
+              <legend>Preferred Work Mode</legend>
+              <label><input type="radio" />Remote</label><br />
+              <label><input type="radio" />Hybrid</label><br />
+              <label><input type="radio" />Office</label>
+            </fieldset>
+          </article>
+          <article class="question18">
+            <h3>Question 18</h3>
+            <p>How does this quote apply to mastering programming?</p>
+            <blockquote>
+              <p>We are what we repeatedly do. Excellence, then, is not an act, but
+              a habit.</p>
+            <cite>— Aristotle</cite>
+            </blockquote>
+            <textarea rows="4" name="q18" ></textarea>
+          </article>
+          <article class="question19">
+            <h3>Question 19</h3>
+            <input type="checkbox" name="q19" />
+            I confirm that all answers provided are honest.
+          </article>
+          <article class="question20">
+            <h3>Question 20</h3>
+            <p>Any additional feedback, thoughts, or suggestions?</p>
+            <textarea name="q20" rows="5"></textarea>
+          </article>
+        </section>
+        <section class="Final Confirmation">
+          <h2>Final Confirmation</h2>
+          <button type="submit">Submit Feedback</button>
+        </section>
+      </form>
+    </main>
     <footer>
-        <p>
-            Kindly accept <a href="https://www.goindigo.in/information/privacy.html">cookies</a> 
-            and continue using our website for a smoother experience.
-        </p>
-        <button type="submit">Accept</button>
+      <p>© 2026 Feedback System</p>
     </footer>
-</body>
+  </body>
 </html>
